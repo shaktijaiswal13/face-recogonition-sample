@@ -1,0 +1,8 @@
+configs.py
+__pycache__
+detected_faces
+faces
+videos
+.DS_Store
+unique_faces
+face_recognizer.xml
