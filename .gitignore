@@ -6,3 +6,6 @@ videos
 .DS_Store
 unique_faces
 face_recognizer.xml
+saved_faces
+video
+pyvenv.cfg
