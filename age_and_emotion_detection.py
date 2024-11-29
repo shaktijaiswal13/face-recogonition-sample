@@ -9,10 +9,10 @@ from tensorflow.keras.models import load_model
 
 
 # RECOGNITION_CAM_URL = configs.INTERNAL_CAM_URL
-# RECOGNITION_CAM_URL = configs.GALI_CAM_URL_HIGH
+RECOGNITION_CAM_URL = configs.GALI_CAM_URL_HIGH
 # RECOGNITION_CAM_URL = configs.SAVED_VIDEO_PATH
 # RECOGNITION_CAM_URL = configs.BACK_GATE_CAM_URL_HIGH
-RECOGNITION_CAM_URL = configs.OFFICE_CAM_URL_HIGH
+# RECOGNITION_CAM_URL = configs.OFFICE_CAM_URL_HIGH
 
 # Constants for the face detection model
 IN_WIDTH = 600
