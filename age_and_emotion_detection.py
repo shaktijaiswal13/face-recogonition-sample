@@ -6,21 +6,23 @@ from urllib.request import urlretrieve
 import configs
 from deepface import DeepFace
 from tensorflow.keras.models import load_model
+import json
+with open('camera_config.json', 'r') as file:
+    config = json.load(file)
 
-
-# RECOGNITION_CAM_URL = configs.INTERNAL_CAM_URL
-RECOGNITION_CAM_URL = configs.GALI_CAM_URL_HIGH
+RECOGNITION_CAM_URL = configs.USB_CAM_URL
+# RECOGNITION_CAM_URL = configs.GALI_CAM_URL_HIGH
 # RECOGNITION_CAM_URL = configs.SAVED_VIDEO_PATH
 # RECOGNITION_CAM_URL = configs.BACK_GATE_CAM_URL_HIGH
 # RECOGNITION_CAM_URL = configs.OFFICE_CAM_URL_HIGH
 
-# Constants for the face detection model
-IN_WIDTH = 600
-IN_HEIGHT = 600
-RESIZE = True
-SAVE = False
-RESIZE_WIDTH = 800
-RESIZE_HEIGHT = 600
+resolution = config['logitech_camera']['resolution']
+IN_WIDTH = resolution['width']
+IN_HEIGHT = resolution['height']
+RESIZE = config['logitech_camera']['resize']
+SAVE = config['logitech_camera']['save']
+RESIZE_WIDTH = config['logitech_camera']['resize_width']
+RESIZE_HEIGHT = config['logitech_camera']['resize_height']
 
 # model = load_model('gender_detection.model')
 # model.save('gender_detection.h5')
@@ -109,7 +111,6 @@ def recognize_face():
             break
         
         try:
-            original_frame = frame
             if RESIZE:
                 frame = cv2.resize(frame, (RESIZE_WIDTH, RESIZE_HEIGHT))
             frame_height = frame.shape[0]

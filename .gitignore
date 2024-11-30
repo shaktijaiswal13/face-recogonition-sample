@@ -9,3 +9,4 @@ face_recognizer.xml
 saved_faces
 video
 pyvenv.cfg
+camera_config.json

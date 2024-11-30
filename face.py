@@ -3,26 +3,16 @@ import cv2
 # Define Models
 face_pbtxt = "models/opencv_face_detector.pbtxt"
 face_pb = "models/opencv_face_detector_uint8.pb"
-age_prototxt = "models/age_deploy_2.prototxt"
-age_model = "models/age_net_2.caffemodel"
 gender_prototxt = "models/gender_deploy.prototxt"
 gender_model = "models/gender_net_2.caffemodel"
 MODEL_MEAN_VALUES = [104, 117, 123]
 
 # Load Models
 face = cv2.dnn.readNet(face_pb, face_pbtxt)
-age = cv2.dnn.readNet(age_model, age_prototxt)
 gen = cv2.dnn.readNet(gender_model, gender_prototxt)
 
-# Check if models are loaded successfully
-if face.empty() or age.empty() or gen.empty():
-    print("Error: One or more models failed to load.")
-    exit()
-else:
-    print("Models loaded successfully.")
 
 # Setup Classifications
-age_classifications = ['(0-2)', '(4-6)', '(8-12)', '(15-20)', '(25-32)', '(38-43)', '(48-53)', '(60-100)']
 gender_classifications = ['Male', 'Female']
 
 # Open webcam
@@ -64,8 +54,6 @@ while True:
             cv2.rectangle(img_cp, (x1, y1), (x2, y2), (0, 255, 0), 2)
             face_bounds.append([x1, y1, x2, y2])
 
-    if not face_bounds:
-        print("No faces were detected.")
 
     for face_bound in face_bounds:
         try:
@@ -80,14 +68,9 @@ while True:
             gen.setInput(blob)
             gender_prediction = gen.forward()
             gender = gender_classifications[gender_prediction[0].argmax()]
-
-            # Age prediction
-            age.setInput(blob)
-            age_prediction = age.forward()
-            age = age_classifications[age_prediction[0].argmax()]
-
+            
             # Display age and gender
-            cv2.putText(img_cp, f'{gender}, {age}', (face_bound[0], face_bound[1] - 10),
+            cv2.putText(img_cp, f'{gender}', (face_bound[0], face_bound[1] - 10),
                         cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 4, cv2.LINE_AA)
 
         except Exception as e:

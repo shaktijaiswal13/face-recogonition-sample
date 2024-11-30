@@ -1,20 +1,27 @@
 import os
+from urllib.request import urlretrieve
+from zipfile import ZipFile
 import cv2
 import sys
 import numpy as np
 import configs
+import json
+with open('camera_config.json', 'r') as file:
+    config = json.load(file)
+
 
 # RECOGNITION_CAM_URL = configs.INTERNAL_CAM_URL
 RECOGNITION_CAM_URL = configs.GALI_CAM_URL_HIGH
 # RECOGNITION_CAM_URL = configs.SAVED_VIDEO_PATH
 # RECOGNITION_CAM_URL = configs.FRONT_CAM_URL_HIGH
 
-RESIZE = True
-SAVE = False
-IN_WIDTH = 500
-IN_HEIGHT = 500
-RESIZE_WIDTH = 800
-RESIZE_HEIGHT = 600
+resolution = config['windows_camera']['resolution']
+IN_WIDTH = resolution['width']
+IN_HEIGHT = resolution['height']
+RESIZE = config['windows_camera']['resize']
+SAVE = config['windows_camera']['save']
+RESIZE_WIDTH = config['windows_camera']['resize_width']
+RESIZE_HEIGHT = config['windows_camera']['resize_height']
 
 # ========================-Downloading Assets-========================
 def download_and_unzip(url, save_path):
