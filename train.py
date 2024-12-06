@@ -23,7 +23,8 @@ data = []
 labels = []
 
 # load image files from the dataset
-image_files = [f for f in glob.glob(r'C:\Files\gender_dataset_face' + "/**/*", recursive=True) if not os.path.isdir(f)]
+image_files = [f for f in glob.glob(r'C:\Files\gender_dataset_face' + "/**/*", recursive=True) 
+               if not os.path.isdir(f) and f.lower().endswith(('.png', '.jpg', '.jpeg'))]
 
 random.shuffle(image_files)
 
@@ -117,17 +118,17 @@ model = buildModel(width=img_dims[0], height=img_dims[1], depth=img_dims[2],
                             classes=2)
 
 # compile the model
-opt = Adam(lr=lr, decay=lr/epochs)
+opt = Adam(learning_rate=lr)
 model.compile(loss="binary_crossentropy", optimizer=opt, metrics=["accuracy"])
 
 # train the model
-H = model.fit_generator(aug.flow(trainX, trainY, batch_size=batch_size),
+H = model.fit(aug.flow(trainX, trainY, batch_size=batch_size),
                         validation_data=(testX,testY),
                         steps_per_epoch=len(trainX) // batch_size,
                         epochs=epochs, verbose=1)
 
 # save the model to disk
-model.save('gender_detection.model')
+model.save('gender_detection.h5')
 
 # plot training/validation loss/accuracy
 plt.style.use("ggplot")
@@ -135,8 +136,8 @@ plt.figure()
 N = epochs
 plt.plot(np.arange(0,N), H.history["loss"], label="train_loss")
 plt.plot(np.arange(0,N), H.history["val_loss"], label="val_loss")
-plt.plot(np.arange(0,N), H.history["acc"], label="train_acc")
-plt.plot(np.arange(0,N), H.history["val_acc"], label="val_acc")
+plt.plot(np.arange(0, N), H.history["accuracy"], label="train_acc")
+plt.plot(np.arange(0, N), H.history["val_accuracy"], label="val_acc")
 
 plt.title("Training Loss and Accuracy")
 plt.xlabel("Epoch #")

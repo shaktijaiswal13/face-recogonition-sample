@@ -6,7 +6,7 @@ import os
 import cvlib as cv
                     
 # load model
-model = load_model('gender_detection.model')
+model = load_model('gender_detection.h5')
 
 # open webcam
 webcam = cv2.VideoCapture(0)
@@ -47,7 +47,6 @@ while webcam.isOpened():
 
         # apply gender detection on face
         conf = model.predict(face_crop)[0] # model.predict return a 2D matrix, ex: [[9.9993384e-01 7.4850512e-05]]
-
         # get label with max accuracy
         idx = np.argmax(conf)
         label = classes[idx]
