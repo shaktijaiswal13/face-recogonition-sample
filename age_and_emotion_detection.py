@@ -5,7 +5,7 @@ from zipfile import ZipFile
 from urllib.request import urlretrieve
 import configs
 from deepface import DeepFace
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import json
 with open('camera_config.json', 'r') as file:
     config = json.load(file)

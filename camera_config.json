@@ -1,0 +1,43 @@
+{
+    "mac_camera": {
+      "resolution": {
+        "width": 600,
+        "height": 600
+      },
+      "resize": true,
+      "save": false,
+      "resize_width": 800,
+      "resize_height": 600
+    },
+    "windows_camera": {
+      "resolution": {
+        "width": 320,
+        "height": 240
+      },
+      "resize": true,
+      "save": false,
+      "resize_width": 600,
+      "resize_height": 400
+    },
+    "logitech_camera": {
+      "resolution": {
+        "width": 320,
+        "height": 480
+      },
+      "resize": true,
+      "save": false,
+      "resize_width": 800,
+      "resize_height": 600
+    },
+    "video_feed": {
+      "resolution": {
+        "width": 0,
+        "height": 0
+      },
+      "resize": false,
+      "save": false,
+      "resize_width": 0,
+      "resize_height": 0
+    }
+}
+  

@@ -9,4 +9,5 @@ face_recognizer.xml
 saved_faces
 video
 pyvenv.cfg
-camera_config.json
+video.mp4
+haarcascade_russian_plate_number.xml
