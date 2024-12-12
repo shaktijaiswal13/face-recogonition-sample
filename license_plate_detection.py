@@ -18,16 +18,12 @@ if plate_cascade.empty():
     print("Error loading cascade classifier.")
     exit()
 
-cap = cv2.VideoCapture("video.mp4")
+cap = cv2.VideoCapture("carvideos/video2.mp4")
 
 ret, frame = cap.read()
 if not ret:
     print("Failed to grab the first frame.")
     exit()
-
-original_height, original_width = frame.shape[:2]
-
-print(f"Original resolution: {original_width}x{original_height}")
 
 while True:
     ret, frame = cap.read()

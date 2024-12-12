@@ -7,7 +7,7 @@ videos
 unique_faces
 face_recognizer.xml
 saved_faces
-video
 pyvenv.cfg
 video.mp4
 haarcascade_russian_plate_number.xml
+carvideos
