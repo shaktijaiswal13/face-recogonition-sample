@@ -15,7 +15,10 @@ This project is a robust and modular **Face Recognition System** that supports m
 - An IP camera
 - A saved video file or image
 
-**Recognize those faces** 
+**Recognize those faces** figure out who the person is by comparing with known faces stored in the system
+
+**Analyze emotions**, **estimate age**, and **predict gender** of each detected face
+
 ---
 <img width="400" alt="Screenshot 2025-04-14 at 2 14 55 PM" src="https://github.com/user-attachments/assets/252f07c7-42ea-4610-89bc-f47ac705f6e5" />
 
