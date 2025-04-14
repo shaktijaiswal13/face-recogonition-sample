@@ -10,7 +10,7 @@ This project is a robust and modular **Face Recognition System** that supports m
 - ✅ TensorFlow/Keras (for gender classification)
 
 ---
-<img width="323" alt="Screenshot 2025-04-14 at 2 00 50 PM" src="https://github.com/user-attachments/assets/8c655a86-974a-4f3a-8435-e2258cf41a00" /><img width="339" alt="Screenshot 2025-04-14 at 2 01 06 PM" src="https://github.com/user-attachments/assets/48e71280-be6d-4671-b60f-a15d3d442c6a" />
+<img width="323" alt="Screenshot 2025-04-14 at 2 00 50 PM" src="https://github.com/user-attachments/assets/8c655a86-974a-4f3a-8435-e2258cf41a00" />       <img width="339" alt="Screenshot 2025-04-14 at 2 01 06 PM" src="https://github.com/user-attachments/assets/48e71280-be6d-4671-b60f-a15d3d442c6a" />
 
 
 ## 📸 Features
