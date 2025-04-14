@@ -1,5 +1,5 @@
-#<img width="708" alt="Screenshot 2025-04-14 at 1 36 41 PM" src="https://github.com/user-attachments/assets/795c434b-0a4b-453b-b062-aba27d77b1b2" />
- Face Recognition System
+## Face Recognition System
+<img width="379" alt="Screenshot 2025-04-14 at 2 00 32 PM" src="https://github.com/user-attachments/assets/75f4a665-e95a-49b0-8f46-a5d9a4b46910" />
 
 This project is a robust and modular **Face Recognition System** that supports multiple face detection and recognition backends, including:
 
@@ -10,6 +10,7 @@ This project is a robust and modular **Face Recognition System** that supports m
 - ✅ TensorFlow/Keras (for gender classification)
 
 ---
+<img width="323" alt="Screenshot 2025-04-14 at 2 00 50 PM" src="https://github.com/user-attachments/assets/8c655a86-974a-4f3a-8435-e2258cf41a00" />
 
 ## 📸 Features
 
@@ -23,10 +24,8 @@ This project is a robust and modular **Face Recognition System** that supports m
 - 🎭 **Emotion Detection** using DeepFace
 - ⏳ **Age Estimation** using OpenCV DNN
 - 🚻 **Gender Detection** using custom-trained Keras model
-- 📹 **Real-time Video Support** via:<img width="704" alt="Screenshot 2025-04-14 at 1 36 58 PM" src="https://github.com/user-attachments/assets/dcd0514b-d687-4378-8626-5cb6377282c4" />
-
+- 📹 **Real-time Video Support** via:
   - Live camera feed (USB/IP)
-  - Pre-recorded video<img width="419" alt="Screenshot 2025-04-14 at 1 39 32 PM" src="https://github.com/user-attachments/assets/bb8cc75e-fb51-4a51-bad6-53385a8aff22" />
-
+  - Pre-recorded video
 - 🧊 **Freshest Frame Grabber**: Custom threaded class to always fetch the latest frame from camera feed
 - 🧬 **Unique Face Extraction** from multiple face captures using face embeddings
