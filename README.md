@@ -31,4 +31,6 @@ This project is a robust and modular **Face Recognition System** that supports m
   - Live camera feed (USB/IP)
   - Pre-recorded video
 -  **Freshest Frame Grabber**: Custom threaded class to always fetch the latest frame from camera feed
--  **Unique Face Extraction** from multiple face captures using face embeddings
+-  **Unique Face Extraction**
+-  from multiple face captures using face embeddings
+-  it prevents the system from being spammed by duplicates
