@@ -40,7 +40,7 @@ This project is a robust and modular **Face Recognition System** that supports m
 -  **Age Estimation** using OpenCV DNN
 -  **Gender Detection** using custom-trained Keras model
 
-  **📸 Features**
+  ## 📸 Features
 
 -  **Accurate Face Detection** with support for classic and modern models
 -  **Robust Face Recognition** using traditional (LBPH) and deep learning approaches
