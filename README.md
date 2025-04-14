@@ -10,6 +10,12 @@ This project is a robust and modular **Face Recognition System** that supports m
 -  DeepFace (for emotion analysis)
 -  TensorFlow/Keras (for gender classification)
 
+ **Detect faces** in real-time from:
+- A webcam
+- An IP camera
+- A saved video file or image
+
+**Recognize those faces** 
 ---
 <img width="400" alt="Screenshot 2025-04-14 at 2 14 55 PM" src="https://github.com/user-attachments/assets/252f07c7-42ea-4610-89bc-f47ac705f6e5" />
 
@@ -31,6 +37,6 @@ This project is a robust and modular **Face Recognition System** that supports m
   - Live camera feed (USB/IP)
   - Pre-recorded video
 -  **Freshest Frame Grabber**: Custom threaded class to always fetch the latest frame from camera feed
--  **Unique Face Extraction**
+-  **Unique Face Extraction**:
 -  from multiple face captures using face embeddings
 -  it prevents the system from being spammed by duplicates
