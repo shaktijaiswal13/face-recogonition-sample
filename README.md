@@ -50,5 +50,5 @@ This project is a robust and modular **Face Recognition System** that supports m
 -  **Real-time Video Support** for both live camera and pre-recorded video
 -  **Freshest Frame Grabber**: Custom threaded class to always fetch the latest frame from camera feed
 -  **Unique Face Extraction**:
--  Automatically filters duplicate face data
--  Ensures each face is recognized only once per instance
+  -  Automatically filters duplicate face data
+  -  Ensures each face is recognized only once per instance
