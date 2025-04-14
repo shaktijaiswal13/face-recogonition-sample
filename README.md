@@ -1,6 +1,6 @@
 ## Face Recognition System
-<img width="150" alt="Screenshot 2025-04-14 at 2 00 32 PM" src="https://github.com/user-attachments/assets/75f4a665-e95a-49b0-8f46-a5d9a4b46910" />  
-<img width="100" alt="Screenshot 2025-04-14 at 2 00 50 PM" src="https://github.com/user-attachments/assets/8c655a86-974a-4f3a-8435-e2258cf41a00" />
+<img width="130" alt="Screenshot 2025-04-14 at 2 00 32 PM" src="https://github.com/user-attachments/assets/75f4a665-e95a-49b0-8f46-a5d9a4b46910" />  
+<img width="110" alt="Screenshot 2025-04-14 at 2 00 50 PM" src="https://github.com/user-attachments/assets/8c655a86-974a-4f3a-8435-e2258cf41a00" />
 
 This project is a robust and modular **Face Recognition System** that supports multiple face detection and recognition backends, including:
 
